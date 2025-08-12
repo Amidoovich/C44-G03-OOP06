@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text;
+using S6.Built_in_Interfaces;
 
 namespace S6
 {
@@ -161,6 +162,33 @@ namespace S6
             #endregion
 
             #endregion
+
+            #endregion
+            #region Buit-in Interfaces
+
+            Employee employee01 = new Employee() { Id = 10 , Name = "Omar" , Salary = 5000};
+            Employee employee02 = new Employee() { Id = 20 , Name = "Mona" , Salary = 8000};
+            Console.WriteLine(employee01);
+            Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
+            Console.WriteLine(employee02);
+            Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+            // Array => Built in class implement interface [ICloneable] => Clone()
+
+            //employee02 = (Employee)employee01.Clone();
+            //employee02 = new Employee()
+            //{
+            //    Id = employee01.Id,
+            //    Name = employee01.Name,
+            //    Salary = employee01.Salary,
+            //};
+            employee02 = new Employee(employee01);
+            Console.WriteLine("After Deep Copy");
+            Console.WriteLine(employee01);
+            Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
+            Console.WriteLine(employee02);
+            Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+
+
 
             #endregion
         }
