@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Text;
 
 namespace S6
 {
@@ -105,6 +106,59 @@ namespace S6
 
 
 
+
+            #endregion
+            #region Array of Reference Type [stringbuilder]
+
+            //StringBuilder[] names01 = new StringBuilder[1];
+            //names01[0] = new StringBuilder();
+            //// null => Omar
+            ////StringBuilder stringBuilder01 = new StringBuilder();
+            ////stringBuilder01.Append("Omar");
+
+
+            ////names01[0] = "Omar";
+
+            //names01[0].Append("Omar"); // NullReferenceException
+
+            ////string[] names02 = new string[1];
+            ////names02[0] = "Omar"; // Syntax Sugar 
+            ///
+
+            //StringBuilder[] names01 = [new StringBuilder("omar")];
+            //StringBuilder[] names02 = new StringBuilder[1];
+
+            //Console.WriteLine($"HashCode of names01 = {names01.GetHashCode()}");
+            //Console.WriteLine($"HashCode of names02 = {names02.GetHashCode()}");
+
+            #region Shallow Copy
+            //names02 = names01;
+            //Console.WriteLine("After Shallow Copy");
+            //Console.WriteLine($"HashCode of names01 = {names01.GetHashCode()}");
+            //Console.WriteLine($"HashCode of names02 = {names02.GetHashCode()}");
+
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+            //names01[0].Append(" Salma");
+            //Console.WriteLine("After Changing");
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+
+            #endregion
+            #region Deep Copy
+
+            //names02 = (StringBuilder[])names01.Clone();
+            //Console.WriteLine("After Deep Copy");
+            //Console.WriteLine($"HashCode of names01 = {names01.GetHashCode()}");
+            //Console.WriteLine($"HashCode of names02 = {names02.GetHashCode()}");
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+            //names01[0].Append(" Salma");
+            //Console.WriteLine("After Changing");
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+
+            #endregion
 
             #endregion
 
