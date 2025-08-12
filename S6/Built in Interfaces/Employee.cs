@@ -59,6 +59,7 @@ namespace S6.Built_in_Interfaces
             return this.Salary.CompareTo(other?.Salary);
         }
 
+
         //public int CompareTo(object? obj)
         //{
         //    throw new NotImplementedException();

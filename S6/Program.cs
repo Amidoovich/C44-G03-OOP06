@@ -190,36 +190,54 @@ namespace S6
             //Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
 
             #endregion
-            // int => Built in struct implement interface [ICompareable] => ComparerTo()
-            int[] numbers = { 4, 5, 6, 9, 1, 2, 7, 5 };
-            Array.Sort(numbers);
+            #region ICompareable
+            //// int => Built in struct implement interface [ICompareable] => ComparerTo()
+            //int[] numbers = { 4, 5, 6, 9, 1, 2, 7, 5 };
+            //Array.Sort(numbers);
 
-            foreach (int number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            //foreach (int number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+            //Employee[] employees =
+
+            //{
+            //    new Employee() {Id = 10 ,Name =  "Omar" , Salary = 6000 },
+            //    new Employee() {Id = 20 ,Name =  "Ahmed" , Salary = 10000 },
+            //    new Employee() {Id = 30 ,Name =  "Sama" , Salary = 4000 },
+            //    new Employee() {Id = 40 ,Name =  "May" , Salary = 5000 },
+            //};
+
+            //Array.Sort(employees);
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+
+            //Array.Reverse(employees);
+
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //} 
+            #endregion
+            #region IComparer
 
             Employee[] employees =
-                
+
             {
                 new Employee() {Id = 10 ,Name =  "Omar" , Salary = 6000 },
                 new Employee() {Id = 20 ,Name =  "Ahmed" , Salary = 10000 },
                 new Employee() {Id = 30 ,Name =  "Sama" , Salary = 4000 },
                 new Employee() {Id = 40 ,Name =  "May" , Salary = 5000 },
             };
-
-            Array.Sort(employees);
-            foreach (Employee employee in employees)
-            { 
-                Console.WriteLine(employee);
-            }
-
-            Array.Reverse(employees);
-
+            Array.Sort(employees,new EmployeeNameComparer());
             foreach (Employee employee in employees)
             {
                 Console.WriteLine(employee);
             }
+            #endregion
             #endregion
         }
     }
