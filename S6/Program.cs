@@ -10,12 +10,12 @@ namespace S6
 
             #region Array of value type
 
-            #region Shallow Copy
             //int[] Arr01 = { 1, 2, 3 };
             //int[] Arr02 = new int[3];
 
             //Console.WriteLine($"Hash Code Of Arr01 = {Arr01.GetHashCode()}"); //54267293
             //Console.WriteLine($"Hash Code Of Arr02 = {Arr02.GetHashCode()}"); //18643596
+            #region Shallow Copy
 
             //Arr02 = Arr01; // Shallow Copy
             //               // Copy Value of Arr01 To Arr02
@@ -42,7 +42,7 @@ namespace S6
             //Obj = 10;
             //Obj = 10.2;
             //Obj = true;
-            
+
 
             //Arr02 = (int[])Arr01.Clone(); // Deep Copy
             //                              // Happened in Heap
@@ -56,11 +56,55 @@ namespace S6
             //Arr01[0] = 100;
             //Console.WriteLine("After Changing");
 
-            //Console.WriteLine($"Arr01[0] = {Arr01[0]}"); 
-            //Console.WriteLine($"Arr02[0] = {Arr02[0]}"); 
+            //Console.WriteLine($"Arr01[0] = {Arr01[0]}");
+            //Console.WriteLine($"Arr02[0] = {Arr02[0]}");
 
 
             #endregion
+
+            #endregion
+            #region Array of Reference Type [string]
+
+            //string[] names01 = { "Omar", "Amr" };
+            //string[] names02 = new string[2];
+
+            //Console.WriteLine($"HashCode of names01 = {names01.GetHashCode()}");
+            //Console.WriteLine($"HashCode of names02 = {names02.GetHashCode()}");
+            #region Shallow Copy
+
+            //names02 = names01; // Shallow Copy
+            //                   // Copy Value names01 => names02
+            //                   // [names01 - names02] => have Same Value
+            //                   // [names01 - names02] => Refer to Same Obj
+
+            //Console.WriteLine("After Shallow Copy");
+            //Console.WriteLine($"HashCode of names01 = {names01.GetHashCode()}");
+            //Console.WriteLine($"HashCode of names02 = {names02.GetHashCode()}");
+
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+            //names01[0] = "Salma";
+            //Console.WriteLine("After Changing");
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+            #endregion
+            #region Deep Copy
+
+            //names02 = (string[])names01.Clone(); //Deep Copy
+            //Console.WriteLine("After Deep Copy");
+            //Console.WriteLine($"HashCode of names01 = {names01.GetHashCode()}");
+            //Console.WriteLine($"HashCode of names02 = {names02.GetHashCode()}");
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+            //names01[0] = "Salma";
+            //Console.WriteLine("After Changing");
+            //Console.WriteLine($"names01[0] = {names01[0]}");
+            //Console.WriteLine($"names02[0] = {names02[0]}");
+
+            #endregion
+
+
+
 
             #endregion
 
