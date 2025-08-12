@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace S6.Built_in_Interfaces
 {
-    internal class Employee : ICloneable
+    internal class Employee : ICloneable , IComparable<Employee>
     {
         public int Id { get; set; }
         public string? Name { get; set; }
@@ -43,5 +43,25 @@ namespace S6.Built_in_Interfaces
             return $"Id = {Id}, Name = {Name} , Salary = {Salary}";
         }
 
+        public int CompareTo(Employee? other)
+        {
+            // Emp01.CompareTo(other)
+            // 1 => This.Salary > other.Salary
+            // -1 => This.Salary < other.Salary
+            // 0 => This.Salary = other.Salary
+            //if(this.Salary > other?.Salary)
+            //    return 1;
+            //else if(this.Salary < other?.Salary)
+            //    return -1;
+            //else 
+            //    return 0;
+
+            return this.Salary.CompareTo(other?.Salary);
+        }
+
+        //public int CompareTo(object? obj)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

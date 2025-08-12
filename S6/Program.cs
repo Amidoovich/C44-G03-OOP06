@@ -166,30 +166,60 @@ namespace S6
             #endregion
             #region Buit-in Interfaces
 
-            Employee employee01 = new Employee() { Id = 10 , Name = "Omar" , Salary = 5000};
-            Employee employee02 = new Employee() { Id = 20 , Name = "Mona" , Salary = 8000};
-            Console.WriteLine(employee01);
-            Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
-            Console.WriteLine(employee02);
-            Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
-            // Array => Built in class implement interface [ICloneable] => Clone()
+            #region ICloneable
+            //Employee employee01 = new Employee() { Id = 10 , Name = "Omar" , Salary = 5000};
+            //Employee employee02 = new Employee() { Id = 20 , Name = "Mona" , Salary = 8000};
+            //Console.WriteLine(employee01);
+            //Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
+            //Console.WriteLine(employee02);
+            //Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+            //// Array => Built in class implement interface [ICloneable] => Clone()
 
-            //employee02 = (Employee)employee01.Clone();
-            //employee02 = new Employee()
-            //{
-            //    Id = employee01.Id,
-            //    Name = employee01.Name,
-            //    Salary = employee01.Salary,
-            //};
-            employee02 = new Employee(employee01);
-            Console.WriteLine("After Deep Copy");
-            Console.WriteLine(employee01);
-            Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
-            Console.WriteLine(employee02);
-            Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+            ////employee02 = (Employee)employee01.Clone();
+            ////employee02 = new Employee()
+            ////{
+            ////    Id = employee01.Id,
+            ////    Name = employee01.Name,
+            ////    Salary = employee01.Salary,
+            ////};
+            //employee02 = new Employee(employee01);
+            //Console.WriteLine("After Deep Copy");
+            //Console.WriteLine(employee01);
+            //Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
+            //Console.WriteLine(employee02);
+            //Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
 
+            #endregion
+            // int => Built in struct implement interface [ICompareable] => ComparerTo()
+            int[] numbers = { 4, 5, 6, 9, 1, 2, 7, 5 };
+            Array.Sort(numbers);
 
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
 
+            Employee[] employees =
+                
+            {
+                new Employee() {Id = 10 ,Name =  "Omar" , Salary = 6000 },
+                new Employee() {Id = 20 ,Name =  "Ahmed" , Salary = 10000 },
+                new Employee() {Id = 30 ,Name =  "Sama" , Salary = 4000 },
+                new Employee() {Id = 40 ,Name =  "May" , Salary = 5000 },
+            };
+
+            Array.Sort(employees);
+            foreach (Employee employee in employees)
+            { 
+                Console.WriteLine(employee);
+            }
+
+            Array.Reverse(employees);
+
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
             #endregion
         }
     }
