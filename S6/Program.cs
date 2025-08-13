@@ -100,6 +100,17 @@ namespace S6
 
 
             #endregion
+            #region Second Project
+
+            //Console.WriteLine($"Add {Maths.Add(5,5)}");
+            //Console.WriteLine($"Substract {Maths.SubStract(5,5)}");
+            //Console.WriteLine($"Multiply {Maths.Multiply(5,5)}");
+            //Console.WriteLine($"Divide {Maths.Divide(5,0)}");
+            //Console.WriteLine($"Divide {Maths.Divide(0,5)}");
+            //Console.WriteLine($"Divide {Maths.Divide(5,5)}");
+
+            #endregion
+
         }
     }
 }
