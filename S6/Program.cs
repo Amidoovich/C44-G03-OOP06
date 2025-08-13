@@ -110,7 +110,66 @@ namespace S6
             //Console.WriteLine($"Divide {Maths.Divide(5,5)}");
 
             #endregion
+            #region Third Project
+            //User user;
+            //Discount discount;
+            //int Choice , Quantity;
+            //bool IsParse;
+            //decimal Price;
+            //do
+            //{
+            //    Console.WriteLine("1.Regular User\n2.Permium User\n3.Guest User");
+            //    IsParse = int.TryParse(Console.ReadLine(),out Choice); 
+            //}
+            //while (!IsParse);
 
+            //switch (Choice)
+            //{
+            //    case 1 :
+            //        user = new RegularUser();
+            //        break;
+            //    case 2 :
+            //        user = new PermiumUser();
+            //        break;
+            //    case 3: 
+            //        user = new GuestUser();
+            //        break;
+            //    default :
+            //        user = new GuestUser();
+            //        break;
+            //}
+
+            //discount = user.GetDiscount();
+            //do
+            //{
+            //    Console.Write("Please Enter The price : ");
+            //    IsParse = decimal.TryParse(Console.ReadLine(), out Price);
+            //}while (!IsParse);
+            //do
+            //{
+            //    Console.Write("Please Enter The Quantity : ");
+            //    IsParse = int.TryParse(Console.ReadLine(), out Quantity);
+            //}
+            //while (!IsParse);
+
+            //decimal TheDiscount = discount.CalculateDiscount(Price,Quantity);
+            //decimal ThePrice = (Price * Quantity) - TheDiscount;
+
+
+            //Console.WriteLine($"the price = {Price*Quantity:C}");
+            //Console.WriteLine($"the Discount = {TheDiscount:C}");
+            //Console.WriteLine($"The price after Discount = {ThePrice:C}");
+
+
+
+
+
+
+
+
+
+
+            #endregion
         }
     }
 }
