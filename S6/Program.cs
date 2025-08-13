@@ -1,11 +1,21 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text;
+using S6.Abstraction;
 using S6.Built_in_Interfaces;
 
 namespace S6
 {
     internal class Program
     {
+        static void ProcessShape(Shape shape)
+        {
+            if(shape is not null)
+            {
+                Console.WriteLine(shape.CalcArea());
+                Console.WriteLine(shape.Perimmeter);
+             
+            }
+        }
         static void Main(string[] args)
         {
             #region Shallow Copy and Deep Copy
@@ -224,20 +234,27 @@ namespace S6
             #endregion
             #region IComparer
 
-            Employee[] employees =
+            //Employee[] employees =
 
-            {
-                new Employee() {Id = 10 ,Name =  "Omar" , Salary = 6000 },
-                new Employee() {Id = 20 ,Name =  "Ahmed" , Salary = 10000 },
-                new Employee() {Id = 30 ,Name =  "Sama" , Salary = 4000 },
-                new Employee() {Id = 40 ,Name =  "May" , Salary = 5000 },
-            };
-            Array.Sort(employees,new EmployeeNameComparer());
-            foreach (Employee employee in employees)
-            {
-                Console.WriteLine(employee);
-            }
+            //{
+            //    new Employee() {Id = 10 ,Name =  "Omar" , Salary = 6000 },
+            //    new Employee() {Id = 20 ,Name =  "Ahmed" , Salary = 10000 },
+            //    new Employee() {Id = 30 ,Name =  "Sama" , Salary = 4000 },
+            //    new Employee() {Id = 40 ,Name =  "May" , Salary = 5000 },
+            //};
+            //Array.Sort(employees,new EmployeeNameComparer());
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
             #endregion
+            #endregion
+            #region Abstraction
+            //Shape shape = new Shape(); // invalid
+            Rectangle rectangle = new Rectangle(10.2M,20.2M);
+            ProcessShape(rectangle);
+
+            
             #endregion
         }
     }
